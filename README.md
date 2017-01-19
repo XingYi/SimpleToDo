@@ -38,7 +38,12 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Challenges encountered while building the app.
+ListView Position number cannot be solely used just for editing task as it does not correspond to the database auto-incremented
+primary id. Hence, need to pass the object id in the Intent to the next Activity screen.
+
+Date Time not displayed correctly, it kept displaying year as 1970. It was fixed by multiplying the UNIX timestamp by 1000.
+Eg. String formattedDate = df.format(task.dateCreated * 1000);
 
 ## License
 
